@@ -1,0 +1,85 @@
+.footer {
+  color: #fff;
+
+  &-section {
+    padding-bottom: 50px;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 100px;
+  }
+
+  &-title {
+    font-size: 25px;
+    position: relative;
+    margin-bottom: 20px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background-color: #fff;
+    }
+  }
+
+  &-contact {
+    & h3 {
+    }
+
+    & a {
+      color: #b39f7a;
+    }
+  }
+
+  &-soclink {
+    & a {
+      display: block;
+      color: #b39f7a;
+    }
+  }
+
+  &-logo {
+    & img {
+      display: block;
+      width: 200px;
+    }
+  }
+}
+
+.me {
+  text-align: center;
+  & a {
+    color: #b39f7a;
+    transition: 0.3s;
+    &:hover {
+      color: rgb(56, 56, 252);
+      text-shadow: 0px 0px 10px rgb(61, 61, 243);
+    }
+  }
+}
+
+/*smartphone*/
+@media (max-width: 480px) {
+  .footer-content {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 320px) {
+}
+
+/*tablets*/
+@media (max-width: 768px) {
+}
+
+/*netbook*/
+@media (max-width: 1024px) {
+}
+
+/*computer*/
+@media (max-width: 1280px) {
+}

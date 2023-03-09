@@ -1,0 +1,76 @@
+.catalog {
+  margin-top: 100px;
+}
+
+.catalog-header {
+  max-width: 500px;
+  margin: 0 auto;
+  z-index: 100;
+  background-color: #b39f7ab9;
+  border: 2px solid #b39f7ab9;
+  margin-bottom: 40px;
+  padding: 20px;
+  top: 75px;
+  position: sticky;
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  &-btn {
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0px 30px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &.header-btn-select {
+      background-color: #4b3621;
+      border: 2px solid #4b3621;
+    }
+
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  & input {
+    padding-left: 5px;
+    font-size: 14px;
+    outline: none;
+
+    &:focus {
+      border: 2px solid #4b3621;
+    }
+  }
+}
+
+.CatalogTeaList-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/*smartphone*/
+@media (max-width: 480px) {
+  .catalog-header {
+    top: 50px;
+  }
+}
+
+@media (max-width: 320px) {
+}
+
+/*tablets*/
+@media (max-width: 768px) {
+}
+
+/*netbook*/
+@media (max-width: 1024px) {
+}
+
+/*computer*/
+@media (max-width: 1280px) {
+}

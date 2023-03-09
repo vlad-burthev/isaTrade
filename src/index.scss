@@ -1,0 +1,89 @@
+@import "./style/reset";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Noto+Serif:wght@700&family=Rosario:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Pacifico&display=swap");
+// font-family: 'DM Sans', sans-serif;
+// font-family: 'Rosario', sans-serif;
+// font-family: 'Noto Serif', serif;
+// font-family: 'Dancing Script', cursive;
+// font-family: 'Pacifico', cursive;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #555555;
+  background-color: #5d4e4c;
+}
+
+.s {
+  background: #e6e3c4;
+  background: #b39f7a;
+  background: #4b3621;
+  background: #663322;
+  background: #5d4e4c;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #e6e3c4;
+  border-radius: 20px;
+  border: 5px solid #5d4e4c;
+}
+
+.title {
+  font-family: "Noto Serif", serif;
+  font-size: 40px;
+  position: relative;
+  padding-bottom: 20px;
+  color: #663322;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #663322;
+  }
+}
+
+.mobHeader {
+  display: none;
+}
+
+/*smartphone*/
+@media (max-width: 480px) {
+}
+
+@media (max-width: 320px) {
+}
+
+/*tablets*/
+@media (max-width: 768px) {
+  .mobHeader {
+    display: flex;
+  }
+  .mobHeader-content {
+    width: 100%;
+  }
+  .header {
+    display: none;
+  }
+}
+
+/*netbook*/
+@media (max-width: 1024px) {
+}
+
+/*computer*/
+@media (max-width: 1280px) {
+}

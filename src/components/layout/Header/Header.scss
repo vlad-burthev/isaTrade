@@ -1,0 +1,48 @@
+.header {
+  position: fixed;
+  background-color: #4d3b38;
+  z-index: 999;
+  box-shadow: 0 0 10px #000;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &-content {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-logo {
+    display: flex;
+    align-items: center;
+
+    & img {
+      width: 50px;
+    }
+
+    & span {
+      margin-left: 5px;
+      font-family: "Noto Serif", serif;
+      color: #ffffffba;
+    }
+  }
+
+  &-btn {
+    padding: 10px 30px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    color: #e6e3c4;
+    border: 1px solid #e6e3c4;
+    background-color: transparent;
+
+    &:hover {
+      background-color: #e6e3c4;
+      border: 1px solid transparent;
+      color: #4d3b38;
+    }
+  }
+}

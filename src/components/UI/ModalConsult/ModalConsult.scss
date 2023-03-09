@@ -1,0 +1,80 @@
+.modalConsult {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #00000076;
+
+  &-section {
+    position: relative;
+    width: 400px;
+    height: 350px;
+    margin: 100px auto 0;
+    background-color: #fff;
+  }
+
+  &-close {
+    position: absolute;
+    display: block;
+    width: 100px;
+    text-align: center;
+    background-color: #5d4e4c;
+    color: #fff;
+    border: 2px solid #5d4e4c;
+    left: 20px;
+    bottom: -40px;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: #3b3130;
+    }
+  }
+
+  &-content {
+    padding: 20px;
+    position: relative;
+
+    & form {
+      & input {
+        width: 100%;
+        display: block;
+        padding-left: 10px;
+      }
+
+      .modalConsult-input {
+        margin-top: 10px;
+
+        & span {
+          color: red;
+          font-size: 14px;
+          opacity: 0;
+          &.errorText {
+            opacity: 1;
+          }
+        }
+      }
+
+      & button {
+        position: absolute;
+        bottom: -50px;
+        right: 20px;
+        padding: 10px 10px;
+        background-color: transparent;
+        border: 2px solid #3b3130;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: #3b3130;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.error {
+  outline: 2px solid red;
+}

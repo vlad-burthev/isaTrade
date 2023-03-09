@@ -1,0 +1,168 @@
+.modalOrder {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #0000004d;
+  z-index: 1000;
+
+  &-section {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    margin: 150px auto 0;
+    background-color: #f2ddb7;
+    padding: 20px;
+  }
+
+  &-content {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-photo {
+    width: 40%;
+    margin-top: 20px;
+    & img {
+      border: 5px solid #a87d52;
+      display: block;
+    }
+  }
+
+  &-info {
+    width: 55%;
+    display: block;
+  }
+
+  .inputPrice {
+    display: flex;
+    align-items: center;
+
+    & p {
+      margin-right: 10px;
+    }
+
+    & input {
+      margin-right: 10px;
+      background-color: #b39f7a;
+      border: 2px solid transparent;
+      padding-left: 10px;
+      width: 100px;
+      outline: none;
+
+      &:focus {
+        border: 2px solid #5d4e4c;
+      }
+    }
+  }
+
+  & form {
+    & .modalOrder-label {
+      margin-bottom: 20px;
+    }
+
+    & p {
+      color: #000;
+      font-weight: 600;
+    }
+
+    & span {
+      font-family: "Noto Serif", serif;
+      font-size: 20px;
+      color: #f49943;
+    }
+  }
+
+  &-contact {
+    & .input-block {
+      margin-top: 10px;
+
+      & span {
+        font-size: 14px;
+        opacity: 0;
+
+        &.errorText {
+          color: red;
+          opacity: 1;
+        }
+      }
+    }
+
+    & input {
+      width: 100%;
+      outline: none;
+      padding-left: 10px;
+      letter-spacing: 1px;
+      font-weight: 300;
+
+      &.error {
+        border: 2px solid red;
+      }
+
+      &:focus {
+        border: 2px solid#5d4e4c;
+      }
+    }
+  }
+
+  & .SubmitButton {
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 20px;
+    border: 2px solid #4b3621;
+    color: #4b3621;
+    background-color: #d6c199;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #4b3621;
+      color: #fff;
+    }
+  }
+}
+
+/*smartphone*/
+@media (max-width: 480px) {
+  .modalOrder-section {
+    margin-top: 0px;
+    padding: 0;
+    width: 100%;
+  }
+  .modalOrder-content {
+    & button.modalMore-close {
+      right: 0;
+    }
+  }
+  .modalOrder-contact {
+    & input {
+      width: 80%;
+    }
+  }
+  .modalOrder-photo {
+    display: none;
+    & img {
+      border: 5px solid #a87d52;
+      display: block;
+    }
+  }
+  .modalOrder-info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+}
+
+/*tablets*/
+@media (max-width: 768px) {
+}
+
+/*netbook*/
+@media (max-width: 1024px) {
+}
+
+/*computer*/
+@media (max-width: 1280px) {
+}

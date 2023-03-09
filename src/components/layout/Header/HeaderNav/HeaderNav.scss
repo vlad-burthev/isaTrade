@@ -1,0 +1,31 @@
+.header-nav {
+  &-item {
+    color: #fff;
+    transition: 0.3s;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    &:hover {
+      color: #a67b5b;
+
+      &::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+
+    &::after {
+      transition: 0.2s;
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #a67b5b;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

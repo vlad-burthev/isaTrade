@@ -1,0 +1,67 @@
+.intro-photo {
+  display: block;
+  height: 500px;
+  width: 400px;
+  position: relative;
+}
+
+.intro-photo-coffee {
+  top: -100px;
+  left: 40px;
+  position: absolute;
+  background-image: url(../../../../../public/img/intro/coffee.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 500px;
+  transform: translate(10px 20px);
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.pack {
+  transition: 0.3s;
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/*smartphone*/
+@media (max-width: 480px) {
+  .intro-photo {
+    height: 200px;
+    width: 80%;
+    margin: 0 auto;
+    &-coffee {
+      display: none;
+    }
+    .pack {
+      margin: 0 auto;
+      width: 400px !important;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+}
+
+/*tablets*/
+@media (max-width: 768px) {
+}
+
+/*netbook*/
+@media (max-width: 1024px) {
+  .intro-photo {
+    height: 300px;
+
+    &-coffee {
+      display: none;
+    }
+  }
+}
+
+/*computer*/
+@media (max-width: 1280px) {
+}

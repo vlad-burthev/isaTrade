@@ -1,0 +1,111 @@
+.about-us {
+  border: 2px solid #663322;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+
+  &-info {
+    font-family: "Rosario", sans-serif;
+    padding: 40px;
+    text-align: center;
+    color: #f7f7f7;
+    width: 50%;
+    background-color: #b39f7a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    opacity: 0;
+    transform: translate(300px, 0);
+    transition: 0.8s ease;
+
+    &.active {
+      opacity: 1;
+      transform: translate(0px, 0);
+    }
+
+    & .about-slogan {
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+
+  &-img {
+    width: 50%;
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translate(-300px, 0);
+    transition: 0.8s ease;
+
+    &.active {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+  }
+}
+
+/*smartphone*/
+@media (max-width: 480px) {
+  .about-us {
+    flex-direction: column-reverse;
+
+    &-info {
+      transform: translate(0, -50px);
+      width: 100%;
+      text-align: justify;
+
+      & h3 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      & .about-slogan {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      transform: translate(0, 50px);
+    }
+  }
+}
+
+@media (max-width: 320px) {
+}
+
+/*tablets*/
+@media (max-width: 768px) {
+  .about-us {
+    flex-direction: column-reverse;
+
+    &-info {
+      transform: translate(0, -50px);
+      width: 100%;
+      text-align: justify;
+
+      & h3 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      & .about-slogan {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      transform: translate(0, 50px);
+    }
+  }
+}
+
+/*netbook*/
+@media (max-width: 1024px) {
+}
+
+/*computer*/
+@media (max-width: 1280px) {
+}

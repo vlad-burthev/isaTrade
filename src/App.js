@@ -1,24 +1,92 @@
-import logo from './logo.svg';
-import './App.css';
+import ModalMore from "./components/UI/ModalMore/ModalMore";
+import ModalOrder from "./components/UI/ModalOrder/ModalOrder";
+import { useEffect, useState } from "react";
+import Footer from "./components/layout/Footer/Footer";
+import Header from "./components/layout/Header/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Catalog from "./components/layout/Catalog/Catalog";
+import Main from "./components/layout/Main/Main";
+import ModalConsult from "./components/UI/ModalConsult/ModalConsult";
+import CoffeeContextProvider from "./components/Store/CoffeeContextProvider";
+import MobHeader from "./components/layout/MobHeader/MobHeader";
 
 function App() {
+  const [showModalOrder, setShowModalOrder] = useState(false);
+  const [showModalMore, setShowModalMore] = useState(false);
+  const [showModalConsult, setShowModalConsult] = useState(false);
+
+  const [infoMore, setInfoMore] = useState("");
+  const [infoOrder, setInfoOrder] = useState("");
+
+  const getInfoHandler = (info) => {
+    setInfoMore(info);
+    setShowModalMore(true);
+  };
+
+  const orderFromMore = (info) => {
+    setInfoOrder(info);
+    setShowModalOrder(true);
+    setShowModalMore(false);
+  };
+
+  const orderInfo = (info) => {
+    setInfoOrder(info);
+    setShowModalOrder(true);
+  };
+  const [WindowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, [WindowWidth]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header showModal={setShowModalConsult} />
+      <MobHeader />
+
+      <CoffeeContextProvider>
+        <Router>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Main
+                  orderInfo={orderInfo}
+                  orderFromMore={orderFromMore}
+                  getInfoHandler={getInfoHandler}
+                  setShowModalMore={setShowModalMore}
+                  setShowModalOrder={setShowModalOrder}
+                />
+              }
+            />
+            <Route
+              path="/catalog"
+              element={
+                <Catalog
+                  orderInfo={orderInfo}
+                  getInfoHandler={getInfoHandler}
+                />
+              }
+            />
+          </Routes>
+        </Router>
+      </CoffeeContextProvider>
+
+      {showModalOrder && (
+        <ModalOrder infoOrder={infoOrder} showModal={setShowModalOrder} />
+      )}
+      {showModalMore && (
+        <ModalMore
+          orderFromMore={orderFromMore}
+          infoMore={infoMore}
+          setShowModalMore={setShowModalMore}
+        />
+      )}
+
+      {showModalConsult && (
+        <ModalConsult setShowModalConsult={setShowModalConsult} />
+      )}
+      <Footer />
+    </>
   );
 }
 

@@ -1,0 +1,40 @@
+.burgerMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  transition: 0.2s;
+  background-color: #b39f7a;
+  z-index: 900;
+  border-right: 2px solid #4b3621;
+  opacity: 0;
+  overflow: hidden;
+
+  &.showBurger {
+    opacity: 1;
+    width: 30%;
+
+    .burgerMenu-content {
+      margin-left: 0px !important;
+    }
+  }
+
+  &-content {
+    transition: 0.3s;
+    margin-left: -100px;
+    position: absolute;
+    padding-left: 20px;
+    margin-top: 100px;
+
+    & a {
+      display: block !important;
+      margin-bottom: 20px;
+    }
+  }
+
+  .mob-header-nav-item {
+    color: #fff;
+    display: block;
+  }
+}

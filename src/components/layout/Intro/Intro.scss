@@ -1,0 +1,59 @@
+.intro {
+  padding: 150px 0 100px 0;
+
+  &-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-title {
+    font-size: 56px;
+    max-width: 600px;
+    line-height: 70px;
+    color: #b39f7a;
+    text-shadow: 5px 5px 0px #925f2cb5;
+
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+
+    &.active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+
+    &::selection {
+      background-color: #a7573c;
+      color: #fff;
+    }
+  }
+}
+
+/*smartphone*/
+@media (max-width: 480px) {
+  .intro-section {
+    display: block;
+  }
+  .intro-title {
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width: 320px) {
+}
+
+/*tablets*/
+@media (max-width: 768px) {
+}
+
+/*netbook*/
+@media (max-width: 1024px) {
+  .intro-section {
+    display: block;
+  }
+}
+
+/*computer*/
+@media (max-width: 1280px) {
+}
