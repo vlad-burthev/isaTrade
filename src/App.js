@@ -45,7 +45,7 @@ function App() {
       <MobHeader />
 
       <CoffeeContextProvider>
-        <Router>
+        <HashRouter>
           <Routes>
             <Route
               path="/"
@@ -69,7 +69,7 @@ function App() {
               }
             />
           </Routes>
-        </Router>
+        </HashRouter>
       </CoffeeContextProvider>
 
       {showModalOrder && (
