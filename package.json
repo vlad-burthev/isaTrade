@@ -2,6 +2,7 @@
   "name": "isatrade",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vlad-burthev.github.io/",
   "dependencies": {
     "@babel/core": "^7.21.8",
     "@testing-library/jest-dom": "^5.14.1",
