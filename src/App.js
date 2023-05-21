@@ -9,6 +9,7 @@ import Main from "./components/layout/Main/Main";
 import ModalConsult from "./components/UI/ModalConsult/ModalConsult";
 import CoffeeContextProvider from "./components/Store/CoffeeContextProvider";
 import MobHeader from "./components/layout/MobHeader/MobHeader";
+import { HashRouter } from "react-router-dom";
 
 function App() {
   const [showModalOrder, setShowModalOrder] = useState(false);
@@ -44,7 +45,7 @@ function App() {
       <MobHeader />
 
       <CoffeeContextProvider>
-        <Router>
+        <HashRouter>
           <Routes>
             <Route
               path="/"
@@ -68,7 +69,7 @@ function App() {
               }
             />
           </Routes>
-        </Router>
+        </HashRouter>
       </CoffeeContextProvider>
 
       {showModalOrder && (
