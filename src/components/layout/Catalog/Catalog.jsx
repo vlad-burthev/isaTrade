@@ -11,12 +11,11 @@ const Catalog = (props) => {
   const coffeeStore = CoffeeCTX.coffee;
 
   const [inputName, setInput] = useState("");
+  const [selected, setSelected] = useState(true);
 
   const changeinput = (event) => {
     setInput(event.target.value);
   };
-
-  const [selected, setSelected] = useState(true);
 
   return (
     <div className="catalog">
@@ -45,12 +44,22 @@ const Catalog = (props) => {
           </div>
         </div>
         <section className="catalog-section">
-          <CatalogTeaList
-            getInfoHandler={props.getInfoHandler}
-            orderInfo={props.orderInfo}
-            store={selected ? coffeeStore : teaStore}
-            inputName={inputName}
-          />
+          {selected ? (
+            <CatalogTeaList
+              selected={selected}
+              getInfoHandler={props.getInfoHandler}
+              orderInfo={props.orderInfo}
+              store={coffeeStore}
+              inputName={inputName}
+            />
+          ) : (
+            <CatalogTeaList
+              getInfoHandler={props.getInfoHandler}
+              orderInfo={props.orderInfo}
+              store={teaStore}
+              inputName={inputName}
+            />
+          )}
         </section>
       </Container>
     </div>
