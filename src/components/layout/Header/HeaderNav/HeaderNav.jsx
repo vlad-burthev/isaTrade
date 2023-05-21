@@ -7,10 +7,10 @@ const HeaderNav = () => {
       <Link href="/" className="header-nav-item">
         Головна
       </Link>
-      <Link href="#about" className="header-nav-item">
+      <Link href="/#about" className="header-nav-item">
         Про нас
       </Link>
-      <Link href="catalog" className="header-nav-item">
+      <Link href="/catalog" className="header-nav-item">
         Каталог
       </Link>
       <Link href="#footer" className="header-nav-item">
