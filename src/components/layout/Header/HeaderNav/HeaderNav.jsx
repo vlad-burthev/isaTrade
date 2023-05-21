@@ -1,20 +1,21 @@
+import { Link } from "react-router-dom";
 import "./HeaderNav.scss";
 
 const HeaderNav = () => {
   return (
     <nav className="header-nav">
-      <a href="/" className="header-nav-item">
+      <Link href="/" className="header-nav-item">
         Головна
-      </a>
-      <a href="/#about" className="header-nav-item">
+      </Link>
+      <Link href="#about" className="header-nav-item">
         Про нас
-      </a>
-      <a href="/catalog" className="header-nav-item">
+      </Link>
+      <Link href="catalog" className="header-nav-item">
         Каталог
-      </a>
-      <a href="#footer" className="header-nav-item">
+      </Link>
+      <Link href="#footer" className="header-nav-item">
         Контакти
-      </a>
+      </Link>
     </nav>
   );
 };
