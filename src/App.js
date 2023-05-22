@@ -45,7 +45,7 @@ function App() {
       <MobHeader />
 
       <CoffeeContextProvider>
-        <HashRouter>
+        <HashRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route
               path="/"
