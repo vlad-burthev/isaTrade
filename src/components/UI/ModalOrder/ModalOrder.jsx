@@ -82,9 +82,7 @@ const ModalOrder = ({ showModal, infoOrder }) => {
     }
   };
 
-  const mail = `Телефон: ${changePhone}, Имя: ${changeName}, Товар: ${
-    infoOrder.name
-  }, Цена: ${orderPrice.toFixed(1)}, Количество: ${gram} грам`;
+  const mail = `Телефон: ${changePhone}, Имя: ${changeName}, Товар: ${infoOrder.name}, Цена: ${infoOrder.price}, Количество: ${gram} грам`;
 
   return (
     <div onClick={() => showModal(false)} className="modalOrder">
@@ -98,7 +96,7 @@ const ModalOrder = ({ showModal, infoOrder }) => {
             <span></span>
           </button>
           <div className="modalOrder-info">
-            <form method="POST" onSubmit={submit}>
+            <form method="POST" action="./form.js" onSubmit={submit}>
               <p className="modalOrder-label">
                 Товар: <span name="tovar">{infoOrder.name}</span>
               </p>

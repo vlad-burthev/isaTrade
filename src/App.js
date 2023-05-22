@@ -3,13 +3,17 @@ import ModalOrder from "./components/UI/ModalOrder/ModalOrder";
 import { useEffect, useState } from "react";
 import Footer from "./components/layout/Footer/Footer";
 import Header from "./components/layout/Header/Header";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  HashRouter,
+} from "react-router-dom";
 import Catalog from "./components/layout/Catalog/Catalog";
 import Main from "./components/layout/Main/Main";
 import ModalConsult from "./components/UI/ModalConsult/ModalConsult";
 import CoffeeContextProvider from "./components/Store/CoffeeContextProvider";
 import MobHeader from "./components/layout/MobHeader/MobHeader";
-import { HashRouter } from "react-router-dom";
 
 function App() {
   const [showModalOrder, setShowModalOrder] = useState(false);
@@ -17,6 +21,7 @@ function App() {
   const [showModalConsult, setShowModalConsult] = useState(false);
 
   const [infoMore, setInfoMore] = useState("");
+
   const [infoOrder, setInfoOrder] = useState("");
 
   const getInfoHandler = (info) => {
